@@ -44,18 +44,20 @@ import java.util.Observer;
         mWindow = window;
         mModel = model;
     }
-
+    public void show() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("AlternativeView: ");
+        System.out.println(new StringBuilder(mModel.getData()).reverse());
+        mIsValid = true;
+    }
+    
     @Override
     public void update(Observable o, Object arg) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             show();
     }
 
-    private void show() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.print("AlternativeView: ");
-        System.out.println(new StringBuilder(mModel.getData().reverse()));
-    }
+    
     
     
 }

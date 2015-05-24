@@ -1,5 +1,3 @@
-package tw.edu.npu.mis;
-
 /*
  * Copyright (c) 2015, STP
  * All rights reserved.
@@ -25,11 +23,28 @@ package tw.edu.npu.mis;
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+package tw.edu.npu.mis;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author STP
  */
 public class Subject {
+    private List<Observer> mObservers = new ArrayList<>();
+    
+    public void attach(Observer o) {
+        mObservers.add(o);
+    }
+    public void detach(Observer o) {
+        mObservers.remove(o);
+    }
+    public void notifyObserver() {
+        for (Observer o : mObservers){
+            o.update();
+        }
+    }
     
 }
