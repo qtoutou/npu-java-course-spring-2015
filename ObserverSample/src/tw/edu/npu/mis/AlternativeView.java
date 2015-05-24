@@ -25,10 +25,29 @@
  */
 package tw.edu.npu.mis;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  *
  * @author STP
  */
-public class AlternativeView {
+    public class AlternativeView implements Observer {
+        private final Model mModel;
+        private boolean mIsValid;
+        
+        private final String mName;
+        private final Window mWindow;
+
+    public AlternativeView(String name, Window window, Model model) {
+        mName = name;
+        mWindow = window;
+        mModel = model;
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
