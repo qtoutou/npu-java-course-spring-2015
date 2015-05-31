@@ -30,7 +30,7 @@ package tw.edu.npu.mis;
  *
  * @author Samael Wang <freesamael@gmail.com>
  */
-public class Model extends Subject{
+public class Model extends Subject {
 
     private String mData;
 
@@ -48,17 +48,9 @@ public class Model extends Subject{
      *
      * @param data A {@link String} data.
      */
-    public void setData(String data) {
+  public void setData(String data) {
         mData = data;
         notifyObserver();
     }
-
-    /*void attach(AlternativeView aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void attach(AlternativeView aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }*/
 
 }

@@ -25,40 +25,43 @@
  */
 package tw.edu.npu.mis;
 
-import java.util.Observable;
-import java.util.Observer;
 
 /**
  *
  * @author STP
  */
-    public class AlternativeView implements Observer {
-        private final Model mModel;
-        //private boolean mIsValid;
-        
-        private final String mName;
-        private final Window mWindow;
-
+public class AlternativeView implements Observer, Showable{
+    private final Model mModel;
+    //private boolean mIsValid;
+    
+    private final String mName;
+    private final Window mWindow;
+    //private final Model mModel;
+    
+    /*public AlternativeView(Model model) {
+        mModel = model;
+        mModel.attach(this);
+    }*/
     public AlternativeView(String name, Window window, Model model) {
         mName = name;
         mWindow = window;
         mModel = model;
-        mModel.attach(this);//
+         mModel.attach(this);
     }
-    public void show() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.print("AlternativeView: ");
-        System.out.println(new StringBuilder(mModel.getData()).reverse());
-        //mIsValid = true;
+    
+  private void invalidate() {
+        mWindow.schduleRedraw(this);
+        }
+    
+ public void onDraw() {
+        System.out.println("AlternativeView (" + mName + "): "+ new StringBuilder(mModel.getData()).reverse());
+        //mIsValid = false;
     }
     
     @Override
-    public void update(Observable o, Object arg) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            show();
+    public void update() {
+        invalidate();
+        //mIsValid = false;
     }
-
-    
-    
     
 }

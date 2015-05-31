@@ -27,7 +27,6 @@ package tw.edu.npu.mis;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observer;
 
 /**
  * Simulation of a GUI application.
@@ -38,16 +37,15 @@ public class ObserverSample {
 
     public static void main(String[] args) {
         // Initialize MVC and Window objects.
-        Window window = new Window();
+         Window window = new Window();
         Model model = new Model();
-        List<Observer>mInvalidViews = new ArrayList<>();
+        List<Showable> views = new ArrayList<>();
         Controller controller = new Controller(model);
-        //List<View> views = new ArrayList<>();
-        //views.add(new View("View 1", window, model));
-        //views.add(new View("View 2", window, model));
-        //views.add(new View("View 3", window, model));
-        mInvalidViews.add(new AlternativeView("View",window,model));
-        // Start the event loop.
-        //window.startEventLoop(controller, views);
+        views.add(new View("View 1", window, model));
+        views.add(new View("View 2", window, model));
+        views.add(new View("View 3", window, model));
+        views.add(new AlternativeView("View ", window, model));
+       window.startEventLoop(controller, views);
+    
     }
 }
