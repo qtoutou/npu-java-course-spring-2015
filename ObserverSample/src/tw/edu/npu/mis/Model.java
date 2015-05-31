@@ -30,7 +30,7 @@ package tw.edu.npu.mis;
  *
  * @author Samael Wang <freesamael@gmail.com>
  */
-public class Model {
+public class Model extends Subject{
 
     private String mData;
 
@@ -51,5 +51,13 @@ public class Model {
     public void setData(String data) {
         mData = data;
     }
+
+    /*void attach(AlternativeView aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void attach(AlternativeView aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }*/
 
 }
