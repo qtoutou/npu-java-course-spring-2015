@@ -41,7 +41,7 @@ public class ObserverSample {
         Model model = new Model();
         List<Showable> views = new ArrayList<>();
         Controller controller = new Controller(model);
-        views.add(new View("View 1", window, model));
+        views.add(new View("View 1", window, model));//NEW新的VIEW
         views.add(new View("View 2", window, model));
         views.add(new View("View 3", window, model));
         views.add(new AlternativeView("View ", window, model));

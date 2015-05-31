@@ -44,7 +44,7 @@ public class Controller {
      * Read input and update model accordingly.
      */
     public void readInput() {
-        System.out.print("Controller: ");
+        System.out.print("Controller: ");//輸出打入的數字
         Scanner s = new Scanner(System.in);
         String input = s.nextLine().trim();
         if (!input.isEmpty()) {

@@ -54,7 +54,7 @@ public class AlternativeView implements Observer, Showable{
         }
     
  public void onDraw() {
-        System.out.println("AlternativeView (" + mName + "): "+ new StringBuilder(mModel.getData()).reverse());
+        System.out.println("AlternativeView (" + mName + "): "+ new StringBuilder(mModel.getData()).reverse());//顯示出來的內容
         //mIsValid = false;
     }
     
