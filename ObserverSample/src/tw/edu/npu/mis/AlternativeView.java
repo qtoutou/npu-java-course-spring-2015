@@ -34,7 +34,7 @@ import java.util.Observer;
  */
     public class AlternativeView implements Observer {
         private final Model mModel;
-        private boolean mIsValid;
+        //private boolean mIsValid;
         
         private final String mName;
         private final Window mWindow;
@@ -43,6 +43,7 @@ import java.util.Observer;
         mName = name;
         mWindow = window;
         mModel = model;
+        mModel.attach(this);//
     }
     public void show() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
