@@ -48,7 +48,7 @@ import java.util.Observer;
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         System.out.print("AlternativeView: ");
         System.out.println(new StringBuilder(mModel.getData()).reverse());
-        mIsValid = true;
+        //mIsValid = true;
     }
     
     @Override
