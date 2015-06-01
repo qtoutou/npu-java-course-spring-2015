@@ -5,15 +5,16 @@
  */
 package tw.edu.npu.mis;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author STP
  */
 public class Layout extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Layout
-     */
+    private jTextField1;
+    private JButton s1,s2,s3,s4,s5,s6,s7,s8,s9,s0,b1,b2,b3,b4,f1,f2;
     public Layout() {
         initComponents();
     }
@@ -180,7 +181,7 @@ public class Layout extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int a;
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
