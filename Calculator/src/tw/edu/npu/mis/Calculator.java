@@ -4,11 +4,17 @@
  * and open the template in the editor.
  */
 package tw.edu.npu.mis;
+
 /**
  * The model class of the calculator application.
  */
-public abstract class Calculator {
-
+import javax.swing.*;
+public class Calculator {
+         
+    
+    /**
+     * The available operators of the calculator.
+     */
     public enum Operator {
         CLEAR,       // C
         CLEAR_ENTRY, // CE
@@ -30,7 +36,7 @@ public abstract class Calculator {
     }
     
     public void appendDigit(int digit) {
-        
+       int a;
         // TODO code application logic here
     }
     
@@ -51,13 +57,10 @@ public abstract class Calculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                Calculator th1th1 = new  Calculator() {
-                    
-                };
+        CalculatorModel model = new CalculatorModel();
+        CalculatorView View = new CalculatorView(model);
+        CalculatorController Controller = new Controller(model,View);
+        
+    }
+
 }
-}
-
- 
-
-
-                      
