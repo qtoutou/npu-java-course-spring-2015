@@ -25,17 +25,21 @@ public class Calculator extends JFrame implements ActionListener{
     private boolean end,add,sub,mul,div;
     private String str;
     private double num1,num2;
+    private Object listenerList;
     
  interface FakeOnLister{
     void onClick(int index);
 }
  
  interface FButton{
-    public void setOnClickListener(FakeOnLister listener);
+    public void setOnClickListener(Calculator listener);
 } 
  
  public void setOnClickListener(Calculator listener){
-     
+     listener.add(listener);
+ }
+ public void removeOnClickListener(Calculator listener){
+    
  }
     
     public Calculator(){
