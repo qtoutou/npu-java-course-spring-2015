@@ -36,10 +36,13 @@ public class Calculator extends JFrame implements ActionListener{
 } 
  
  public void setOnClickListener(Calculator listener){
-     listener.add(listener);
+     listener.add(listener);//加入觀察者物件
  }
  public void removeOnClickListener(Calculator listener){
-    
+    //移除觀察者物件
+ }
+ public void onClick(){
+    // 通知所有觀察者
  }
     
     public Calculator(){
@@ -87,7 +90,7 @@ public class Calculator extends JFrame implements ActionListener{
         jPanel2.add(f1);
         jPanel2.add(f2);
         jPanel2.add(b4);
-        con.add(jPanel2,BorderLayout.CENTER);
+        con.add(jPanel2,BorderLayout.CENTER);//建立計算機物件
     }
     
         public void num(int i){
