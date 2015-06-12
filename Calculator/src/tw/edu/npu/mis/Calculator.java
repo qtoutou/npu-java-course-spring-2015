@@ -235,7 +235,8 @@ public class Calculator extends JFrame implements ActionListener{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+                Calculator th1=new  Calculator();
+        th1.show();
     }
 
 }
