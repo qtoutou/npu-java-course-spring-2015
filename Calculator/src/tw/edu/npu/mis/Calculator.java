@@ -26,6 +26,18 @@ public class Calculator extends JFrame implements ActionListener{
     private String str;
     private double num1,num2;
     
+ interface FakeOnLister{
+    void onClick(int index);
+}
+ 
+ interface FButton{
+    public void setOnClickListener(FakeOnLister listener);
+} 
+ 
+ public void setOnClickListener(Calculator listener){
+     
+ }
+    
     public Calculator(){
                 super("計算機");
         setSize(300,240);
