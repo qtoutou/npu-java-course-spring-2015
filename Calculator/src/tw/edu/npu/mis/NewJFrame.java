@@ -5,11 +5,13 @@
  */
 package tw.edu.npu.mis;
 
+
+
 /**
  *
  * @author STP
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class NewJFrame extends java.util.Observable {
 
     /**
      * Creates new form NewJFrame

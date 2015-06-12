@@ -10,6 +10,10 @@ import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Observer;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -18,8 +22,21 @@ import javax.swing.JTextField;
 /**
  * The model class of the calculator application.
  */
-public class Calculator extends JFrame implements ActionListener{
-    private JPanel jPanel1,jPanel2;
+public abstract class Calculator extends JFrame implements Observable{
+    
+    protected double result = 0;
+    protected String operateur = "", operande = "";
+    private ArrayList<Observer> listObserver = new ArrayList<Observer>();
+    
+    public abstract void reset();
+    public abstract void calcul();
+    public abstract void getResultat();
+    public abstract void setOperateur(String operateur);
+    public abstract void setNombre(String nbre);
+    public void addObserver(Observer obs){
+        this.listObserver.add(obs);
+    }
+    /*private JPanel jPanel1,jPanel2;
     private JTextField resultField;
     private JButton s1,s2,s3,s4,s5,s6,s7,s8,s9,s0,b1,b2,b3,b4,f1,f2;
     private boolean end,add,sub,mul,div;
@@ -242,7 +259,43 @@ public class Calculator extends JFrame implements ActionListener{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                Calculator th1=new  Calculator();
+                Calculator th1=new  Calculator() {
+
+                    @Override
+                    public void reset() {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+
+                    @Override
+                    public void calcul() {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+
+                    @Override
+                    public void getResultat() {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+
+                    @Override
+                    public void setOperateur(String operateur) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+
+                    @Override
+                    public void addListener(InvalidationListener il) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+
+                    @Override
+                    public void removeListener(InvalidationListener il) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+
+                    @Override
+                    public void setNombre(String nbre) {
+                        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    }
+                };
         th1.show();
     }
 
