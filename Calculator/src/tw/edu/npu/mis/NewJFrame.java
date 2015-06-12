@@ -231,19 +231,19 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String takein;
-        takein = jTextField1.getText() + jButton2.getText();
+        takein = jTextField1.getText() + jButton1.getText();
         jTextField1.setText(takein);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String takein;
-        takein = jTextField1.getText() + jButton3.getText();
+        takein = jTextField1.getText() + jButton2.getText();
         jTextField1.setText(takein);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String takein;
-        takein = jTextField1.getText() + jButton4.getText();
+        takein = jTextField1.getText() + jButton3.getText();
         jTextField1.setText(takein);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -267,19 +267,19 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         String takein;
-        takein = jTextField1.getText() + jButton8.getText();
+        takein = jTextField1.getText() + jButton9.getText();
         jTextField1.setText(takein);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         String takein;
-        takein = jTextField1.getText() + jButton9.getText();
+        takein = jTextField1.getText() + jButton10.getText();
         jTextField1.setText(takein);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         String takein;
-        takein = jTextField1.getText() + jButton10.getText();
+        takein = jTextField1.getText() + jButton11.getText();
         jTextField1.setText(takein);
     }//GEN-LAST:event_jButton11ActionPerformed
 
