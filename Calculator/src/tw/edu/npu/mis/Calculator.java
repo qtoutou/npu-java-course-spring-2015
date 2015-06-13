@@ -57,9 +57,7 @@ public class Calculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        CalculatorModel model = new CalculatorModel();
-        CalculatorView View = new CalculatorView(model);
-        CalculatorController Controller = new Controller(model,View);
+
         
     }
 
