@@ -309,7 +309,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         num1 = Double.parseDouble(jTextField1.getText());
-        jTextField1.setText("");
+        jTextField1.setText("0");
         operation = "+";
     }//GEN-LAST:event_jButton13ActionPerformed
 

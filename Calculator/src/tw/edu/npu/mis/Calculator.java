@@ -8,9 +8,14 @@ package tw.edu.npu.mis;
 /**
  * The model class of the calculator application.
  */
-import javax.swing.*;
+
 public class Calculator {
-         
+
+    private void addObserver(Calculette calculette) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+        
     
     /**
      * The available operators of the calculator.
@@ -57,7 +62,10 @@ public class Calculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        Calculator calc = new Calculator();
+        AbstractControler controler = new CalculetteControler(calc);
+        Calculette calculette = new Calculette(controler); 
+        calc.addObserver(calculette);
         
     }
 
